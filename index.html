@@ -7,23 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>Smart Agriculture System</h1>
         <p>Automated farming using Arduino and sensors</p>
     </header>
 
-    <section>
+    <section id="overview">
         <h2>🌱 Project Overview</h2>
-        <p>This project automates agricultural tasks using sensors and motors.</p>
-        <ul>
-            <li>☔ **Rain Sensor** - Detects rain and moves the servo.</li>
-            <li>🌿 **Soil Moisture Sensor** - Checks soil dryness.</li>
-            <li>🌡️ **Humidity Sensor** - Monitors environmental conditions.</li>
-            <li>🔄 **Servo Motor** - Opens/Closes a cover based on rain detection.</li>
-        </ul>
+        <p>This project automates agricultural tasks using various sensors and motors.</p>
+        <img src="images/project-setup.jpg" alt="Smart Agriculture Model">
     </section>
 
-    <section>
+    <section id="components">
+        <h2>🔧 Components Used</h2>
+
+        <div class="sensor">
+            <img src="images/rain-sensor.jpg" alt="Rain Sensor">
+            <h3>☔ Rain Sensor</h3>
+            <p>Detects rainfall and triggers the servo motor to cover crops.</p>
+        </div>
+
+        <div class="sensor">
+            <img src="images/soil-moisture.jpg" alt="Soil Moisture Sensor">
+            <h3>🌿 Soil Moisture Sensor</h3>
+            <p>Measures the moisture level in the soil and triggers irrigation.</p>
+        </div>
+
+        <div class="sensor">
+            <img src="images/humidity-sensor.jpg" alt="Humidity Sensor">
+            <h3>🌡️ Humidity Sensor</h3>
+            <p>Monitors environmental humidity to analyze crop health.</p>
+        </div>
+
+        <div class="sensor">
+            <img src="images/servo-motor.jpg" alt="Servo Motor">
+            <h3>🔄 Servo Motor</h3>
+            <p>Moves 90° when rain is detected to cover plants.</p>
+        </div>
+
+        <div class="sensor">
+            <img src="images/arduino.jpg" alt="Arduino Uno">
+            <h3>⚡ Arduino Uno</h3>
+            <p>Controls all sensors and actuators in the system.</p>
+        </div>
+    </section>
+
+    <section id="code">
         <h2>📜 Arduino Code</h2>
         <pre>
 #include &lt;Servo.h&gt;
@@ -46,7 +76,8 @@ void loop() {
     </section>
 
     <footer>
-        <p>Created by [Your Name] | GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+        <p>Created by [Arman Khan] | GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
     </footer>
+
 </body>
 </html>
