@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agriculture Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Agriculture System</h1>
+        <p>Automated farming using Arduino and sensors</p>
+    </header>
+
+    <section>
+        <h2>🌱 Project Overview</h2>
+        <p>This project automates agricultural tasks using sensors and motors.</p>
+        <ul>
+            <li>☔ **Rain Sensor** - Detects rain and moves the servo.</li>
+            <li>🌿 **Soil Moisture Sensor** - Checks soil dryness.</li>
+            <li>🌡️ **Humidity Sensor** - Monitors environmental conditions.</li>
+            <li>🔄 **Servo Motor** - Opens/Closes a cover based on rain detection.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>📜 Arduino Code</h2>
+        <pre>
+#include &lt;Servo.h&gt;
+Servo myServo;
+int rainSensor = A0;
+void setup() {
+    myServo.attach(9);
+    pinMode(rainSensor, INPUT);
+}
+void loop() {
+    int rainValue = analogRead(rainSensor);
+    if (rainValue < 500) { 
+        myServo.write(90);
+    } else {
+        myServo.write(0);
+    }
+    delay(1000);
+}
+        </pre>
+    </section>
+
+    <footer>
+        <p>Created by [Your Name] | GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+    </footer>
+</body>
+</html>
